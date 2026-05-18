@@ -25,8 +25,7 @@ cd paperplot
 python -m pip install -e ".[dev]"
 ```
 
-Install directly from the private GitHub repository when your environment has
-access to `Chiahwa/paperplot`:
+Install directly from GitHub:
 
 ```powershell
 python -m pip install "paperplot @ git+ssh://git@github.com/Chiahwa/paperplot.git@v0.1.0"
@@ -191,6 +190,16 @@ New-Item -ItemType Junction `
 The junction keeps the globally available skill synchronized with this
 repository. Update the skill in this repository first, then commit and push the
 change.
+
+## Acknowledgements
+
+`paperplot` was inspired by the plotting-size and publication-formatting ideas
+in [`luzyPer/pyutils`](https://github.com/luzyPer/pyutils), especially the
+practical use of centimeter-based figure dimensions and reusable style presets.
+This package reworks those ideas into an independent Matplotlib package with a
+local context-manager API, PDF-first export, tests, and documentation suitable
+for reuse across projects.
+
 ## Development
 
 Install development dependencies and run tests:
