@@ -14,7 +14,7 @@ rendered with LaTeX by default, and figures are saved as vector PDF by default.
 Install from a local checkout:
 
 ```powershell
-python -m pip install C:\Users\Hwa\Repositories\Python\paperplot
+python -m pip install path\to\paperplot
 ```
 
 Install for editable development:
@@ -181,10 +181,11 @@ Install it globally on this machine by creating a directory junction from the
 user-level skills directory to the repository copy:
 
 ```powershell
-New-Item -ItemType Directory -Path C:\Users\Hwa\.agents\skills -Force
+$paperplotCheckout = "path\to\paperplot"
+New-Item -ItemType Directory -Path (Join-Path $HOME ".agents\skills") -Force
 New-Item -ItemType Junction `
-  -Path C:\Users\Hwa\.agents\skills\paperplot-figure-formatting `
-  -Target C:\Users\Hwa\Repositories\Python\paperplot\.agents\skills\paperplot-figure-formatting
+  -Path (Join-Path $HOME ".agents\skills\paperplot-figure-formatting") `
+  -Target (Join-Path $paperplotCheckout ".agents\skills\paperplot-figure-formatting")
 ```
 
 The junction keeps the globally available skill synchronized with this
