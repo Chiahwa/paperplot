@@ -170,6 +170,27 @@ is only a temporary diagnostic.
 - After changing layout, render or inspect the PDF and check for title,
   axis-label, legend, colorbar, and caption overlap.
 
+## Agent Skill
+
+This repository also ships a Codex/agent skill for plotting tasks:
+
+```text
+.agents/skills/paperplot-figure-formatting/SKILL.md
+```
+
+Install it globally on this machine by creating a directory junction from the
+user-level skills directory to the repository copy:
+
+```powershell
+New-Item -ItemType Directory -Path C:\Users\Hwa\.agents\skills -Force
+New-Item -ItemType Junction `
+  -Path C:\Users\Hwa\.agents\skills\paperplot-figure-formatting `
+  -Target C:\Users\Hwa\Repositories\Python\paperplot\.agents\skills\paperplot-figure-formatting
+```
+
+The junction keeps the globally available skill synchronized with this
+repository. Update the skill in this repository first, then commit and push the
+change.
 ## Development
 
 Install development dependencies and run tests:
@@ -181,3 +202,4 @@ python -m build
 ```
 
 The tests avoid a hard LaTeX dependency by using `usetex=False` where needed.
+
