@@ -28,14 +28,14 @@ python -m pip install -e ".[dev]"
 Install directly from GitHub:
 
 ```powershell
-python -m pip install "paperplot @ git+ssh://git@github.com/Chiahwa/paperplot.git@v0.1.0"
+python -m pip install "paperplot @ git+ssh://git@github.com/Chiahwa/paperplot.git@v0.1.1"
 ```
 
 For `pyproject.toml` dependencies:
 
 ```toml
 dependencies = [
-    "paperplot @ git+ssh://git@github.com/Chiahwa/paperplot.git@v0.1.0",
+    "paperplot @ git+ssh://git@github.com/Chiahwa/paperplot.git@v0.1.1",
 ]
 ```
 
